@@ -1,0 +1,52 @@
+# Environment files and secrets
+.env
+.env.*
+!.env.example
+frontend/.env
+frontend/.env.*
+!frontend/.env.example
+
+# Python virtual environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Local databases and generated runtime data
+*.db
+*.sqlite
+*.sqlite3
+
+# Node.js dependencies and build output
+node_modules/
+dist/
+
+# IDE and operating system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Secret and credential backups
+*.pem
+*.key
+*.p12
+*.pfx
+*.keystore
+.env.backup
+.env.bak
+
+# Python distribution and test artifacts
+build/
+*.egg-info/
+.pytest_cache/
+
+# Logs and temporary files
+*.log
+tmp/
+temp/

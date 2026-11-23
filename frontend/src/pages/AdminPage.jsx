@@ -1,0 +1,5 @@
+import { Activity, Boxes, CreditCard, Package, ShieldCheck } from "lucide-react";
+const cards = [{ label: "Products", value: "—", icon: Package }, { label: "Available stock", value: "—", icon: Boxes }, { label: "Payments today", value: "—", icon: CreditCard }, { label: "Machine status", value: "Not connected", icon: Activity }];
+export default function AdminPage() {
+  return <div className="page admin-page"><div className="admin-heading"><div><span className="eyebrow">CONTROL CENTRE</span><h1>Admin <em>overview.</em></h1><p>Monitor your vending operation from one place.</p></div><span className="demo-pill"><ShieldCheck size={15}/> Preview mode</span></div><div className="admin-grid">{cards.map(({label,value,icon:Icon}) => <div className="admin-stat" key={label}><span className="stat-icon"><Icon size={20}/></span><small>{label}</small><strong>{value}</strong></div>)}</div><div className="admin-notice"><h2>Connect your backend</h2><p>This dashboard is a frontend starting point. Product, inventory, machine and payment data will appear here after the corresponding authenticated FastAPI endpoints are connected.</p></div></div>;
+}
